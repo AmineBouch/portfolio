@@ -248,7 +248,7 @@ footer{padding-block:28px 40px;display:flex;flex-wrap:wrap;justify-content:space
   <div class="head">
     <p class="label">Personal project</p>
     <h2>Testing Factory: <span class="grad">an AI agent for QA.</span></h2>
-    <p class="muted">I designed and built an AI agent, powered by Claude, that turns a Jira user story or bug into tests that are written, automated, run and reported. The agent does the work. A QA lead supervises every step.</p>
+    <p class="muted">I designed and built an AI agent, powered by Claude, that turns a Jira user story or bug into tests that are written, automated, run and reported. The agent does the work and runs on its own on GitHub Actions. A QA lead supervises every step.</p>
   </div>
 
   <div class="factory">
@@ -270,13 +270,13 @@ footer{padding-block:28px 40px;display:flex;flex-wrap:wrap;justify-content:space
     <article><span class="k">BUG TRIAGE</span><h3>No false bug reaches developers</h3><p>When a test fails, the agent sorts it: real defect, test to fix, or flaky. It drafts the bug with steps, screenshot and video, and a QA confirms it.</p></article>
     <article><span class="k">PRODUCT OWNER</span><h3>Vague story? The agent asks</h3><p>If acceptance criteria are missing, the agent asks the PO in the Jira ticket and writes the tests from the answer.</p></article>
     <article><span class="k">GUARDRAILS</span><h3>Kill switch and safety limits</h3><p>One switch pauses the agent. A cap on tickets per run stops it and alerts the team on Slack.</p></article>
-    <article><span class="k">ALWAYS ON</span><h3>Runs on its own, 24/7</h3><p>Watches Jira every hour, creates missing tests every day, and posts a summary after each run.</p></article>
+    <article><span class="k">ALWAYS ON</span><h3>Runs on its own with GitHub Actions</h3><p>Scheduled GitHub Actions workflows run the agent with no one at the keyboard: they watch Jira every hour, create missing tests every day, and post a summary after each run.</p></article>
     <article><span class="k">MEASURED</span><h3>Weekly digest every Monday</h3><p>Tests created, share reviewed by a QA, rejections and flaky tests. Rejection reasons feed back into the method.</p></article>
   </div>
 
   <div class="factory-foot">
-    <div class="chips"><span class="chip strong">Claude</span><span class="chip">Jira MCP</span><span class="chip">Xray GraphQL API</span><span class="chip">Slack webhooks</span><span class="chip strong">Playwright</span><span class="chip">TypeScript</span><span class="chip">playwright-bdd</span><span class="chip">Python</span></div>
-    <a class="btn primary" href="https://github.com/AmineBouch" target="_blank" rel="noopener">View on GitHub ↗</a>
+    <div class="chips"><span class="chip strong">Claude</span><span class="chip">Jira MCP</span><span class="chip">Xray GraphQL API</span><span class="chip">Slack webhooks</span><span class="chip strong">Playwright</span><span class="chip">TypeScript</span><span class="chip">playwright-bdd</span><span class="chip">Python</span><span class="chip strong">GitHub Actions</span></div>
+    <a class="btn primary" href="https://github.com/AmineBouch/Testing-Factory" target="_blank" rel="noopener">View Testing Factory on GitHub ↗</a>
   </div>
 </section>
 
