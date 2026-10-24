@@ -80,8 +80,8 @@ section{padding-block:80px}
 
 /* flow */
 .flowband{background:linear-gradient(145deg,rgba(21,34,58,.94),rgba(17,27,46,.86));border:1px solid var(--line);border-radius:20px;padding:44px clamp(20px,4vw,48px)}
-.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:28px;counter-reset:f}
-@media (max-width:900px){.flow{grid-template-columns:repeat(3,1fr)}}
+.flow{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:28px;counter-reset:f}
+@media (max-width:900px){.flow{grid-template-columns:repeat(4,1fr)}}
 @media (max-width:520px){.flow{grid-template-columns:repeat(2,1fr)}}
 .node{background:rgba(5,11,22,.34);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:6px;position:relative}
 .node .st{font:500 .7rem var(--mono);color:var(--accent);letter-spacing:.08em}
@@ -287,14 +287,15 @@ footer{padding-block:28px 40px;display:flex;flex-wrap:wrap;justify-content:space
 <section id="flow">
   <div class="flowband">
     <p class="label">E2E expertise</p>
-    <h2 style="margin-top:12px">One order, six systems. I test them all.</h2>
+    <h2 style="margin-top:12px">One order, seven systems. I test them all.</h2>
     <div class="flow" aria-label="Order journey across systems">
       <div class="node"><span class="st">STEP 1</span><b>Storefront</b><span>Magento · SFCC</span></div>
-      <div class="node"><span class="st">STEP 2</span><b>Payment</b><span>Cybersource</span></div>
-      <div class="node"><span class="st">STEP 3</span><b>Fraud check</b><span>Signifyd · Riskified</span></div>
-      <div class="node"><span class="st">STEP 4</span><b>Orchestration</b><span>Manhattan OMS</span></div>
-      <div class="node"><span class="st">STEP 5</span><b>Warehouse</b><span>WMS</span></div>
-      <div class="node"><span class="st">STEP 6</span><b>Finance</b><span>SAP S/4HANA</span></div>
+      <div class="node"><span class="st">STEP 2</span><b>OMS</b><span>Order created · Manhattan OMS</span></div>
+      <div class="node"><span class="st">STEP 3</span><b>Payment</b><span>Cybersource</span></div>
+      <div class="node"><span class="st">STEP 4</span><b>Fraud check</b><span>Signifyd · Riskified</span></div>
+      <div class="node"><span class="st">STEP 5</span><b>Orchestration</b><span>Allocation &amp; routing</span></div>
+      <div class="node"><span class="st">STEP 6</span><b>Warehouse</b><span>WMS</span></div>
+      <div class="node"><span class="st">STEP 7</span><b>Finance</b><span>SAP S/4HANA</span></div>
     </div>
     <p class="flow-note">In luxury e-commerce, a bug rarely sits in one system. It shows up when stock, payment and invoicing don't agree. That's where I spend most of my time: between the systems.</p>
   </div>
