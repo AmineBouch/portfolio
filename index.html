@@ -134,6 +134,10 @@ section{padding-block:80px}
 .trusted div{padding:20px 16px;display:grid;gap:4px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 -1px -1px 0}
 .trusted b{font-family:var(--display);font-size:1.05rem}
 .trusted span{color:var(--muted);font-size:.82rem}
+.trusted .logo{display:flex;align-items:center;gap:8px;height:44px;margin-bottom:10px;color:var(--fg)}
+.trusted .logo img{max-height:34px;max-width:120px;width:auto;filter:brightness(0) invert(1);opacity:.9}
+.trusted .logo svg{width:30px;height:30px;flex:none}
+.trusted .logo .wm{font:700 .78rem/1.2 var(--display);letter-spacing:.14em;color:var(--fg)}
 
 /* about */
 .about{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:start}
@@ -330,12 +334,12 @@ footer{padding-block:28px 40px;display:flex;flex-wrap:wrap;justify-content:space
     <h2>Trusted by leading brands.</h2>
   </div>
   <div class="trusted">
-    <div><b>Kering</b><span>Luxury group</span></div>
-    <div><b>Christian Louboutin</b><span>Luxury e-commerce</span></div>
-    <div><b>LVMH</b><span>Perfumes &amp; Cosmetics</span></div>
-    <div><b>Coface</b><span>Credit insurance</span></div>
-    <div><b>Younited Credit</b><span>Fintech</span></div>
-    <div><b>Air France</b><span>Air cargo</span></div>
+    <div><span class="logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kering-logo.svg" alt="KERING logo" loading="lazy" onerror="this.parentNode.innerHTML='<span class=wm>KERING</span>'"></span><b>Kering</b><span>Luxury group</span></div>
+    <div><span class="logo"><span class="wm">CHRISTIAN LOUBOUTIN</span></span><b>Christian Louboutin</b><span>Luxury e-commerce</span></div>
+    <div><span class="logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/LVMH_logo.svg" alt="LVMH logo" loading="lazy" onerror="this.parentNode.innerHTML='<span class=wm>LVMH</span>'"></span><b>LVMH</b><span>Perfumes &amp; Cosmetics</span></div>
+    <div><span class="logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Coface_-_2018.svg" alt="COFACE logo" loading="lazy" onerror="this.parentNode.innerHTML='<span class=wm>COFACE</span>'"></span><b>Coface</b><span>Credit insurance</span></div>
+    <div><span class="logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Younited_logo.svg" alt="YOUNITED logo" loading="lazy" onerror="this.parentNode.innerHTML='<span class=wm>YOUNITED</span>'"></span><b>Younited Credit</b><span>Fintech</span></div>
+    <div><span class="logo"><svg viewBox="0 0 24 24" role="img" aria-label="Air France logo" fill="currentColor"><path d="M13.776 3.9L5.184 16.332C4.051 17.969 2.208 19.548 0 19.721v.379h9.552c2.544 0 4.397-1.656 5.616-3.48L24 3.9Z"/></svg><span class="wm">AIR FRANCE</span></span><b>Air France</b><span>Air cargo</span></div>
   </div>
 </section>
 
