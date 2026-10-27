@@ -128,6 +128,19 @@ section{padding-block:80px}
 .fx .k{font:500 .7rem var(--mono);letter-spacing:.1em;color:var(--accent-2)}
 .fx p{color:var(--muted);font-size:.93rem}
 .factory-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-top:24px}
+.kgraph{margin-top:40px;display:grid;gap:16px}
+.kgraph-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px}
+.kgraph-head p{color:var(--muted);max-width:62ch;margin-top:8px}
+.kgraph-stats{display:flex;flex-wrap:wrap;gap:20px;font:500 .8rem var(--mono);color:var(--muted)}
+.kgraph-stats b{color:var(--accent);font-size:1rem;margin-right:6px}
+.kgraph-frame{position:relative;height:560px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#0f0f1a}
+@media (max-width:600px){.kgraph-frame{height:440px}}
+.kgraph-frame iframe{width:100%;height:100%;border:0;display:block}
+.kgraph-cover{position:absolute;inset:0;display:grid;place-items:center;background:rgba(11,18,32,.35);border:0;color:var(--fg);cursor:pointer;font:600 .95rem var(--body)}
+.kgraph-cover span{padding:12px 20px;border-radius:999px;background:var(--accent);color:var(--on-accent)}
+.kgraph-cover:hover span{filter:brightness(1.1)}
+.kgraph-credit{font-size:.88rem;color:var(--muted)}
+.kgraph-credit a{color:var(--accent)}
 .trusted{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
 @media (max-width:900px){.trusted{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:520px){.trusted{grid-template-columns:repeat(2,1fr)}}
@@ -282,6 +295,25 @@ footer{padding-block:28px 40px;display:flex;flex-wrap:wrap;justify-content:space
     <div class="chips"><span class="chip strong">Claude</span><span class="chip">Jira MCP</span><span class="chip">Xray GraphQL API</span><span class="chip">Slack webhooks</span><span class="chip strong">Playwright</span><span class="chip">TypeScript</span><span class="chip">playwright-bdd</span><span class="chip">Python</span><span class="chip strong">GitHub Actions</span></div>
     <a class="btn primary" href="https://github.com/AmineBouch/Testing-Factory" target="_blank" rel="noopener">View Testing Factory on GitHub ↗</a>
   </div>
+
+  <div class="kgraph" id="graph">
+    <div class="kgraph-head">
+      <div>
+        <p class="label">Knowledge graph</p>
+        <h3 style="margin-top:10px;font-size:1.5rem">The whole project, mapped.</h3>
+        <p>Every script, workflow, rule and document of Testing Factory, and how they connect. Each colour is a part of the system: the Jira client, the Xray rules, the Playwright tests, the notifications. Click a node to see its links.</p>
+      </div>
+      <div class="kgraph-stats"><span><b>451</b>nodes</span><span><b>852</b>links</span><span><b>18</b>clusters</span></div>
+    </div>
+    <div class="kgraph-frame">
+      <iframe src="testing-factory-graph.html" title="Testing Factory knowledge graph" loading="lazy"></iframe>
+      <button class="kgraph-cover" type="button" id="kgraph-open"><span>Explore the graph</span></button>
+    </div>
+    <div class="factory-foot" style="margin-top:0">
+      <p class="kgraph-credit">Built with <a href="https://github.com/safishamsi/graphify" target="_blank" rel="noopener">graphify</a>, which turns a codebase into a knowledge graph.</p>
+      <a class="btn" href="testing-factory-graph.html" target="_blank" rel="noopener">Open full screen ↗</a>
+    </div>
+  </div>
 </section>
 
 <section id="flow">
@@ -386,6 +418,7 @@ footer{padding-block:28px 40px;display:flex;flex-wrap:wrap;justify-content:space
 </footer>
 
 <script>
+document.getElementById('kgraph-open').addEventListener('click', function(){ this.remove(); });
 document.getElementById('copy-email').addEventListener('click', function(){
   var btn=this, el=document.getElementById('email');
   function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy email'},1800)}
